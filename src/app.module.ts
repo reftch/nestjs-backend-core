@@ -13,17 +13,7 @@ import { CommandsModule } from './commands/commands.module';
 
 @Module({
   imports: [
-    // TypeOrmModule.forRoot(),
-    TypeOrmModule.forRoot({
-        type: 'mysql',
-        host: 'remotemysql.com',
-        port: 3306,
-        username: 'ir3MA7Hylq',
-        password: 'wwVCRbxdgk',
-        database: 'ir3MA7Hylq',
-        entities: ["dist/**/*.entity{.ts,.js}"],
-        synchronize: false,
-    }),
+    TypeOrmModule.forRoot(),
     ProcessesModule,
     TenantsModule,
     JobsModule,
